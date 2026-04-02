@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+/*
+ * Config na div que aborda o conteudo
+ */
+
+.main {
+    padding: 30px 0 0 0;
+    min-height: 100%;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 0 0 30px 0;
+    width: 75%;
+    border-radius: 10px;
+}
+
+/*
+ * Config na Barra de Navegacao Topo Interna
+ * Área Logada
+ */
+.navAuth {
+    position: fixed;
+}
+
+.navAuth img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.navAuth .nav-link {
+    white-space: nowrap;
+    min-width: 150px;
+    height: 50px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #242424 !important;
+    cursor: pointer;
+}
+
+.navAuth .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #250e0e;
+    border-radius: 50px 0 60px 0;
+    transition: all 0.5s ease 0.1s;
+}
+
+.navAuth .nav-link.active {
+    color: #ffffff !important;
+    background-color: #250e0e;
+    border-radius: 60px 5px 60px 5px;
+}
+
+.btn-area-candidato-mobile {
+    display: none;
+}
+
+/*
+ * Config no Cabecalho de toda Pagina
+ */
+.box-inscricao {
+    border-top: 8px solid #250e0e;
+    box-shadow: 0px 1px 2px #666;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+.box-inscricao h3 {
+    font-size: 2rem;
+    color: #5b5b5b;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.box-inscricao h5 {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #250e0e;
+    text-transform: uppercase;
+}
+
+/*
+ * Config na Page RECURSOS
+ */
+.recursos li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.recursos li .data {
+    color: #979797;
+    font-size: 0.7rem;
+}
+
+
+/*
+ * Config na Page ALTERAR SENHA
+ */
+.detalhes-senha li {
+    font-size: 0.8rem;
+    margin: 15px;
+}
+
+.senha label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/*
+ * Config na Page MEUS DADOS
+ */
+
+.minhaFoto {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.minhaFoto a {
+    text-decoration: none;
+}
+
+.minhaFoto .imagem {
+    border-radius: 50px;
+    object-fit: cover;
+    background-size: cover;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.imagem img {
+    width: 150px;
+    height: 150px;
+}
+
+.meusDados label {
+    margin: 3px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.meusDados input {
+    padding: 10px 10px;
+}
+
+form label {
+    margin: 3px;
+    font-size: 0.85rem;
+    color: #424242;
+}
+
+form input {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+}
+
+form input:focus {
+    border-color: rgb(168, 168, 168) !important;
+    /* verde */
+    box-shadow: 0 0 0 0.15rem rgba(40, 81, 156, 0.25) !important;
+}
+
+form .txt-senha-difere {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    transform: translateY(5px);
+    font-size: 0.75rem;
+}
+
+/*
+ * Config da caixa padrão para todos os Box
+ */
+.box-info {
+    margin: 25px 35px;
+    box-shadow: 1px 2px 3px #c2c2c2;
+    padding-bottom: 20px 0 30px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(242, 242, 242);
+}
+
+/*
+ * Config do cabeçalho dentro do Box-info
+ */
+.cabecalho {
+    text-transform: uppercase;
+    color: #606060;
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #dadada;
+    display: flex;
+    align-items: center;
+}
+
+/*
+ * Config na Page Minhas Inscricoes Detalhes da Inscricao
+ */
+#candidato .dados {
+    padding: 8px 20px;
+}
+
+#candidato .dados .campo {
+    padding: 8px;
+    font-weight: bold;
+    color: #3d3d3d;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 0.9rem;
+}
+
+#candidato .dados .info {
+    color: #777;
+}
+
+#candidato .dados .link {
+    font-size: 0.9rem;
+    padding-top: 15px;
+}
+
+#candidato .dados .link i {
+    font-size: 0.7rem;
+}
+
+
+/*
+ * Config na Page Minhas Inscricoes
+ */
+.box-tabela {
+    padding: 30px;
+}
+
+
+table th,
+table td {
+    min-width: 120px;
+    /* ajuste conforme necessário */
+    white-space: nowrap;
+    /* impede quebra de linha dentro da célula */
+}
+
+/* Garante que a tabela possa rolar horizontalmente */
+.table-responsive {
+    width: 100%;
+}
+
+
+.title {
+    padding: 8px 0;
+    background-color: #d4d4d4;
+    color: #250e0e;
+    border: 1px solid #CCC;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.table td {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 10px;
+    gap: 30px;
+}
+
+.table td p {
+    margin: 0 0 5px 0;
+}
+
+.table td p i {
+    margin-right: 8px;
+    font-size: 0.7rem;
+}
+
+.foto {
+    position: absolute;
+    right: 50px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto a {
+    text-decoration: none;
+}
+
+.foto .img {
+    border-radius: 50px;
+    object-fit: cover;
+    background-size: cover;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.foto img {
+    width: 100px;
+    height: 100px;
+}
+
+.cartao a {
+    display: inline-block;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/******************************************** */
+/*
+ * Config na Page Footer
+ */
+footer {
+    height: 120px;
+}
+
+footer .versao {
+    font-size: 0.7rem;
+}
+
+
+/******************************************** */
+/*
+ * Config na Page SITE PUBLICO
+ */
+.public-wrapper {
+    background-color: #e8e8e8;
+    padding-bottom: 0;
+}
+
+.nav-site {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #d4d4d4;
+    height: 70px;
+}
+
+.sair {
+    display: none;
+}
+
+/******************************************** */
+/*
+ * Config na Page LOGIN
+ */
+.login {
+    width: 70%;
+    border-top: 5px solid #250e0e;
+    padding: 60px 60px;
+    background-color: #FFF;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+/* Page ALTERAR SENHA
+ * form input confirmarSenha
+ */
+.text-confirmarSenha {
+    font-size: 0.7rem;
+    padding: 5px 0;
+}
+
+.aviso-senha {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.img-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.img-security img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* 
+ * Page CONTATO
+ */
+.dados-contato {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgb(247, 247, 247);
+    box-shadow: 1px 2px 3px #CCC;
+}
+
+.dados-contato h4 {
+    font-size: 1.5rem;
+    color: #250e0e;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: #f8f8f8;
+    padding: 10px 15px;
+}
+
+.dados-contato p {
+    font-size: 0.9rem;
+    padding-left: 25px;
+}
+
+.enviar-msg {
+    background: linear-gradient(135deg, #250e0e, #4a1c1c, #7a2e2e);
+    border: 1px solid rgb(247, 247, 247);
+    box-shadow: 1px 2px 3px #CCC;
+    color: #FFF;
+}
+
+.enviar-msg label {
+    color: #FFF;
+}
+
+iframe {
+    border: 0;
+}
+
+/* 
+ * Page SOBRE-EMPRESA
+ */
+
+.card {
+    background: linear-gradient(135deg, #250e0e, #4a1c1c, #7a2e2e);
+    border: 1px solid rgb(247, 247, 247);
+    box-shadow: 1px 2px 3px #CCC;
+    color: #FFF;
+    min-height: 200px;
+    gap: 15px;
+    display: flex;
+    text-align: center;
+}
+
+/********************************************/
+/*
+ * CONFIG RESPONSIVA PARA MOBILE
+ */
+@media (max-width: 576px) {
+
+    .main {
+        padding: 0;
+    }
+
+    .content {
+        margin-top: 90px;
+        width: 100%;
+    }
+
+    .box-info {
+        margin: 25px 15px;
+    }
+
+    .box-inscricao {
+        padding: 20px 15px;
+        display: flex;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+
+    .box-inscricao h3 {
+        font-size: 1.5rem;
+    }
+
+    .box-inscricao h5 {
+        font-size: 1.5rem;
+    }
+
+    .msg {
+        font-size: 0.8rem;
+    }
+
+    .title {
+        font-size: 0.7rem;
+    }
+
+    .table tbody td {
+        font-size: 0.7rem;
+    }
+
+    .recursos li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foto {
+        position: relative;
+        left: 100px;
+        margin-bottom: 20px;
+    }
+
+    .sair {
+        display: block;
+    }
+
+    .btn-area-candidato {
+        display: none;
+    }
+
+    .btn-area-candidato-mobile {
+        display: block;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .img-security {
+        display: none;
+    }
+}
+
+/*
+ * CONFIG RESPONSIVA PARA TABLETS
+ */
+@media (max-width: 991px) {
+
+    .main {
+        padding: 0;
+        margin: 0
+    }
+
+    .content {
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .box-info {
+        margin: 25px 15px;
+    }
+
+    .box-inscricao h3 {
+        font-size: 1.5rem;
+    }
+
+    .box-inscricao h5 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        overflow-x: visible;
+    }
+
+    .recursos {
+        padding-left: 7px !important;
+    }
+
+    .recursos li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .senha .row {
+        display: flex !important;
+        text-align: start;
+    }
+
+    .navAuth .navbar-collapse.custom-collapse {
+        display: none;
+        /* Escondido por padrão */
+    }
+
+    .navAuth .navbar-collapse.custom-collapse.show {
+        display: block !important;
+        /* Aparece quando clicamos */
+    }
+
+    .navAuth .nav-link {
+        min-width: 100%;
+        /* Ocupa largura toda */
+        border-radius: 0;
+        /* Remove bordas arredondadas */
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .btn-sair {
+        display: none;
+    }
+
+    .sair {
+        display: block;
+    }
+
+    .btn-area-candidato {
+        display: none;
+    }
+
+    .btn-area-candidato-mobile {
+        display: block;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .img-security {
+        display: none;
+    }
+
+    footer {
+        min-height: 250px;
+    }
+
+}

@@ -1,0 +1,16 @@
+{
+    "name": "israel/gestao-de-candidatos",
+    "description": "Projeto de Gestão de Candidatos",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Israel Almeida",
+            "email": "israeldevjob@gmail.com"
+        }
+    ],
+    "require": {}
+}

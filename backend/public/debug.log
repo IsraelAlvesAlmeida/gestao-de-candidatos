@@ -1,0 +1,18 @@
+--- Dados de Registro ---
+Array
+(
+    [action] => register
+    [nome] => Admin
+    [email] => admin@admin.com
+    [senha] => @Admin01
+)
+_____
+--- Dados de Registro ---
+Array
+(
+    [action] => register
+    [nome] => Admin
+    [email] => admin@admin.com
+    [senha] => @Admin01
+)
+_____
